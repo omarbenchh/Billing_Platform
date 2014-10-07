@@ -1,0 +1,42 @@
+#============================================================================#
+
+Fichier  : OMAR 10:40:43 jeudi 20 février 2014
+  ___________________________
+
+     Prix TOTAL:   20,35   Total EDRs in file:    7813    EDRs Traite    22    EDRs Non traite:    1961   Nom du fichier:   C:\inetpub\wwwroot\billingplatform\ups\spec\benchhiba.omar@outlook.com.csv  
+#============================================================================#
+#============================================================================#
+
+Fichier  : OMAR 10:55:52 jeudi 20 février 2014
+  ___________________________
+
+     Prix TOTAL:   20,35   Total EDRs in file:    7813    EDRs Traite    22    EDRs Non traite:    1961   Nom du fichier:   C:\inetpub\wwwroot\billingplatform\ups\spec\omar.benchhiba@etudiant.univ-lr.fr.csv  
+#============================================================================#
+#============================================================================#
+
+Fichier  : OMAR 11:20:11 jeudi 20 février 2014
+  ___________________________
+
+     Prix TOTAL:   20,35   Total EDRs in file:    7813    EDRs Traite    22    EDRs Non traite:    1961   Nom du fichier:   C:\inetpub\wwwroot\billingplatform\ups\spec\omar.benchhiba@etudiant.univ-lr.fr.csv  
+#============================================================================#
+#============================================================================#
+
+Fichier  : OMAR 11:23:01 jeudi 20 février 2014
+  ___________________________
+
+     Prix TOTAL:   20,35   Total EDRs in file:    7813    EDRs Traite    22    EDRs Non traite:    1961   Nom du fichier:   C:\inetpub\wwwroot\billingplatform\ups\spec\omar.benchhiba@etudiant.univ-lr.fr.csv  
+#============================================================================#
+#============================================================================#
+
+Fichier  : OMAR 14:42:02 jeudi 20 février 2014
+  ___________________________
+
+     Prix TOTAL:   27,31   Total EDRs in file:    7813    EDRs Traite    22    EDRs Non traite:    1961   Nom du fichier:   C:\inetpub\wwwroot\billingplatform\ups\spec\benchhiba.omar@outlook.com.csv  
+#============================================================================#
+#============================================================================#
+
+Fichier  : OMAR 14:44:33 jeudi 20 février 2014
+  ___________________________
+
+     Prix TOTAL:   27,31   Total EDRs in file:    7813    EDRs Traite    22    EDRs Non traite:    1961   Nom du fichier:   C:\inetpub\wwwroot\billingplatform\ups\spec\benchhiba.omar@outlook.com.csv  
+#============================================================================#

@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="Default Web Site/billingplatform" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Users\\Omar\\Documents\\Visual\ Studio\ 2012\\Projects\\BILLING_PLATFORM\\WebApplication1\\obj\\Release\\Package\\PackageTmp$" />
+    <parameterEntry kind="ProviderPath" scope="setAcl" match="^C:\\Users\\Omar\\Documents\\Visual\ Studio\ 2012\\Projects\\BILLING_PLATFORM\\WebApplication1\\obj\\Release\\Package\\PackageTmp$" />
+  </parameter>
+  <parameter name="BillingLogin-Web.config Connection String" description="" value="Data Source=.;Initial Catalog=BillingLogin;User ID=sa;Password=qwertz" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Omar\\Documents\\Visual\ Studio\ 2012\\Projects\\BILLING_PLATFORM\\WebApplication1\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='BillingLogin']/@connectionString" />
+  </parameter>
+</parameters>

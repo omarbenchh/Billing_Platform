@@ -1,0 +1,14 @@
+C:\Users\Omar\Documents\Visual Studio 2012\Projects\BILLING_PLATFORM\SPECIFIC_BILL\bin\Debug\SPECIFIC_BILL.exe.config
+C:\Users\Omar\Documents\Visual Studio 2012\Projects\BILLING_PLATFORM\SPECIFIC_BILL\bin\Debug\SPECIFIC_BILL.exe
+C:\Users\Omar\Documents\Visual Studio 2012\Projects\BILLING_PLATFORM\SPECIFIC_BILL\bin\Debug\SPECIFIC_BILL.pdb
+C:\Users\Omar\Documents\Visual Studio 2012\Projects\BILLING_PLATFORM\SPECIFIC_BILL\bin\Debug\itextsharp.dll
+C:\Users\Omar\Documents\Visual Studio 2012\Projects\BILLING_PLATFORM\SPECIFIC_BILL\bin\Debug\itextsharp.pdfa.dll
+C:\Users\Omar\Documents\Visual Studio 2012\Projects\BILLING_PLATFORM\SPECIFIC_BILL\bin\Debug\itextsharp.xtra.dll
+C:\Users\Omar\Documents\Visual Studio 2012\Projects\BILLING_PLATFORM\SPECIFIC_BILL\bin\Debug\itextsharp.xml
+C:\Users\Omar\Documents\Visual Studio 2012\Projects\BILLING_PLATFORM\SPECIFIC_BILL\obj\Debug\SPECIFIC_BILL.csprojResolveAssemblyReference.cache
+C:\Users\Omar\Documents\Visual Studio 2012\Projects\BILLING_PLATFORM\SPECIFIC_BILL\obj\Debug\SPECIFIC_BILL.exe
+C:\Users\Omar\Documents\Visual Studio 2012\Projects\BILLING_PLATFORM\SPECIFIC_BILL\obj\Debug\SPECIFIC_BILL.pdb
+C:\Users\Omar\Documents\Visual Studio 2012\Projects\BILLING_PLATFORM\SPECIFIC_BILL\bin\Debug\SPECIFIC_BILL.exe.manifest
+C:\Users\Omar\Documents\Visual Studio 2012\Projects\BILLING_PLATFORM\SPECIFIC_BILL\bin\Debug\SPECIFIC_BILL.application
+C:\Users\Omar\Documents\Visual Studio 2012\Projects\BILLING_PLATFORM\SPECIFIC_BILL\obj\Debug\SPECIFIC_BILL.exe.manifest
+C:\Users\Omar\Documents\Visual Studio 2012\Projects\BILLING_PLATFORM\SPECIFIC_BILL\obj\Debug\SPECIFIC_BILL.application

@@ -1,0 +1,67 @@
+#=======================================================================#
+
+Fichier  : OMAR 16:47:50 dimanche 16 février 2014
+  :
+  :   Prix TOTAL:   141,746583333332   Total EDRs in file:    7813    EDRs Traite    5854    EDRs Non traite:    1958   Nom du fichier:   D:\ANNEX 1 - Project 1 CDR File.csv  
+#=======================================================================#
+#=======================================================================#
+
+Fichier  : OMAR 16:49:17 dimanche 16 février 2014
+  :
+  :   Prix TOTAL:   141,746583333332
+   Total EDRs in file:    7813
+    EDRs Traite    5854
+    EDRs Non traite:    1958
+   Nom du fichier:   D:\ANNEX 1 - Project 1 CDR File.csv  
+#=======================================================================#
+#=======================================================================#
+
+Fichier  : OMAR 16:50:21 dimanche 16 février 2014
+  ___________________________
+  :   Prix TOTAL:   141,746583333332
+   Total EDRs in file:    7813
+    EDRs Traite    5854
+    EDRs Non traite:    1958
+   Nom du fichier:   D:\ANNEX 1 - Project 1 CDR File.csv  
+#=======================================================================#
+#=======================================================================#
+
+Fichier  : OMAR 16:51:40 dimanche 16 février 2014
+  ___________________________
+     Prix TOTAL:   141,746583333332   Total EDRs in file:    7813    EDRs Traite    5854    EDRs Non traite:    1958   Nom du fichier:   D:\ANNEX 1 - Project 1 CDR File.csv  
+#=======================================================================#
+#=======================================================================#
+
+Fichier  : OMAR 16:52:50 dimanche 16 février 2014
+  ___________________________
+
+     Prix TOTAL:   141,746583333332   Total EDRs in file:    7813    EDRs Traite    5854    EDRs Non traite:    1958   Nom du fichier:   D:\ANNEX 1 - Project 1 CDR File.csv  
+#=======================================================================#
+#============================================================================#
+
+Fichier  : OMAR 11:49:30 jeudi 20 février 2014
+  ___________________________
+
+     Prix TOTAL:   142,13   Total EDRs in file:    7813    EDRs Traite    5851    EDRs Non traite:    1961   Nom du fichier:   C:\inetpub\wwwroot\billingplatform\ups\yohann.conan@gmail.com.csv  
+#============================================================================#
+#============================================================================#
+
+Fichier  : OMAR 13:46:35 jeudi 20 février 2014
+  ___________________________
+
+     Prix TOTAL:   142,13   Total EDRs in file:    7813    EDRs Traite    5851    EDRs Non traite:    1961   Nom du fichier:   C:\inetpub\wwwroot\billingplatform\ups\benchhiba.omar@outlook.com.csv  
+#============================================================================#
+#============================================================================#
+
+Fichier  : OMAR 13:48:53 jeudi 20 février 2014
+  ___________________________
+
+     Prix TOTAL:   0   Total EDRs in file:    0    EDRs Traite    0    EDRs Non traite:    0   Nom du fichier:   C:\inetpub\wwwroot\billingplatform\ups\benchhiba.omar@outlook.com.csv  
+#============================================================================#
+#============================================================================#
+
+Fichier  : OMAR 13:50:11 jeudi 20 février 2014
+  ___________________________
+
+     Prix TOTAL:   142,13   Total EDRs in file:    7813    EDRs Traite    5851    EDRs Non traite:    1961   Nom du fichier:   C:\inetpub\wwwroot\billingplatform\ups\benchhiba.omar@outlook.com.csv  
+#============================================================================#

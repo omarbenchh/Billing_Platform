@@ -1,0 +1,466 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Kent.Boogaart.KBCsv.Extensions.Data</name>
+    </assembly>
+    <members>
+        <member name="T:Kent.Boogaart.KBCsv.Extensions.Data.DataExtensions">
+            <summary>
+            Provides CSV extensions to <see cref="T:System.Data.DataSet"/> and <see cref="T:System.Data.DataTable"/>.
+            </summary>
+            <remarks>
+            <para>
+            The extension methods in this class allow filling a <see cref="T:System.Data.DataSet"/> and <see cref="T:System.Data.DataTable"/> with data from a <see cref="T:Kent.Boogaart.KBCsv.CsvReader"/>, and dumping the contents
+            of a <see cref="T:System.Data.DataTable"/> to a <see cref="T:Kent.Boogaart.KBCsv.CsvWriter"/>.
+            </para>
+            </remarks>
+            <example>
+            <para>
+            The following example uses <see cref="M:Kent.Boogaart.KBCsv.Extensions.Data.DataExtensions.Fill(System.Data.DataTable,Kent.Boogaart.KBCsv.CsvReader)"/> to read data from the <see cref="T:Kent.Boogaart.KBCsv.CsvReader"/> and populate rows in the <see cref="T:System.Data.DataTable"/>. The <see cref="T:Kent.Boogaart.KBCsv.HeaderRecord"/>
+            read via <see cref="M:Kent.Boogaart.KBCsv.CsvReader.ReadHeaderRecord"/> is used to create columns in the <see cref="T:System.Data.DataTable"/>:
+            </para>
+            <code source="..\Src\Kent.Boogaart.KBCsv.Examples.CSharp\Program.cs" region="FillDataTableFromCSVFile" lang="cs"/>
+            <code source="..\Src\Kent.Boogaart.KBCsv.Examples.VB\Program.vb" region="FillDataTableFromCSVFile" lang="vb"/>
+            </example>
+            <example>
+            <para>
+            The following example uses <see cref="M:Kent.Boogaart.KBCsv.Extensions.Data.DataExtensions.WriteCsv(System.Data.DataTable,Kent.Boogaart.KBCsv.CsvWriter)"/> to write the data in a <see cref="T:System.Data.DataTable"/> out as CSV:
+            </para>
+            <code source="..\Src\Kent.Boogaart.KBCsv.Examples.CSharp\Program.cs" region="WriteDataTableToCSV" lang="cs"/>
+            <code source="..\Src\Kent.Boogaart.KBCsv.Examples.VB\Program.vb" region="WriteDataTableToCSV" lang="vb"/>
+            </example>
+            <example>
+            <para>
+            The following example uses <see cref="M:Kent.Boogaart.KBCsv.Extensions.Data.DataExtensions.FillAsync(System.Data.DataTable,Kent.Boogaart.KBCsv.CsvReader)"/> <see cref="M:Kent.Boogaart.KBCsv.Extensions.Data.DataExtensions.WriteCsvAsync(System.Data.DataTable,Kent.Boogaart.KBCsv.CsvWriter,System.Boolean,System.Nullable{System.Int32})"/> to asynchronously read all data from a CSV file into a
+            <see cref="T:System.Data.DataTable"/>, and then asynchronously write out the first 5 records (without a header) into a <see cref="T:System.String"/>:
+            </para>
+            <code source="..\Src\Kent.Boogaart.KBCsv.Examples.CSharp\Program.cs" region="FillDataTableFromCSVFileThenWriteSomeToStringAsynchronously" lang="cs"/>
+            <code source="..\Src\Kent.Boogaart.KBCsv.Examples.VB\Program.vb" region="FillDataTableFromCSVFileThenWriteSomeToStringAsynchronously" lang="vb"/>
+            </example>
+        </member>
+        <member name="F:Kent.Boogaart.KBCsv.Extensions.Data.DataExtensions.DefaultTableName">
+            <summary>
+            The name of the table that is created and populated when calling <see cref="M:Kent.Boogaart.KBCsv.Extensions.Data.DataExtensions.Fill(System.Data.DataSet,Kent.Boogaart.KBCsv.CsvReader)"/>. Other <see cref="M:Kent.Boogaart.KBCsv.Extensions.Data.DataExtensions.Fill(System.Data.DataSet,Kent.Boogaart.KBCsv.CsvReader)"/> overloads allow a specific table name to be used,
+            and still other overloads allow a specified <see cref="T:System.Data.DataTable"/> instance to be used.
+            </summary>
+        </member>
+        <member name="M:Kent.Boogaart.KBCsv.Extensions.Data.DataExtensions.Fill(System.Data.DataSet,Kent.Boogaart.KBCsv.CsvReader)">
+            <summary>
+            Creates a table in <paramref name="this"/> and populates it with data read from <paramref name="csvReader"/>.
+            </summary>
+            <remarks>
+            <para>
+            The name of the table created and added to <paramref name="this"/> is <see cref="F:Kent.Boogaart.KBCsv.Extensions.Data.DataExtensions.DefaultTableName"/>. All records from <paramref name="csvReader"/> will be read and added to the table.
+            </para>
+            <para>
+            <paramref name="csvReader"/> must have a <see cref="T:Kent.Boogaart.KBCsv.HeaderRecord"/>, which is used to populate the column names of the <see cref="T:System.Data.DataTable"/>.
+            </para>
+            </remarks>
+            <param name="this">
+            The <see cref="T:System.Data.DataSet"/>.
+            </param>
+            <param name="csvReader">
+            The <see cref="T:Kent.Boogaart.KBCsv.CsvReader"/>.
+            </param>
+            <returns>
+            The number of rows added to the <see cref="T:System.Data.DataTable"/> (and therefore the number of data records read from <paramref name="csvReader"/>).
+            </returns>
+        </member>
+        <member name="M:Kent.Boogaart.KBCsv.Extensions.Data.DataExtensions.Fill(System.Data.DataSet,Kent.Boogaart.KBCsv.CsvReader,System.String)">
+            <summary>
+            Creates a table in <paramref name="this"/> and populates it with data read from <paramref name="csvReader"/>.
+            </summary>
+            <remarks>
+            <para>
+            All records from <paramref name="csvReader"/> will be read and added to the table.
+            </para>
+            <para>
+            <paramref name="csvReader"/> must have a <see cref="T:Kent.Boogaart.KBCsv.HeaderRecord"/>, which is used to populate the column names of the <see cref="T:System.Data.DataTable"/>.
+            </para>
+            </remarks>
+            <param name="this">
+            The <see cref="T:System.Data.DataSet"/>.
+            </param>
+            <param name="csvReader">
+            The <see cref="T:Kent.Boogaart.KBCsv.CsvReader"/>.
+            </param>
+            <param name="tableName">
+            The name of the table to create and add to <paramref name="this"/>
+            </param>
+            <returns>
+            The number of rows added to the <see cref="T:System.Data.DataTable"/> (and therefore the number of data records read from <paramref name="csvReader"/>).
+            </returns>
+        </member>
+        <member name="M:Kent.Boogaart.KBCsv.Extensions.Data.DataExtensions.Fill(System.Data.DataSet,Kent.Boogaart.KBCsv.CsvReader,System.String,System.Nullable{System.Int32})">
+            <summary>
+            Creates a table in <paramref name="this"/> and populates it with data read from <paramref name="csvReader"/>.
+            </summary>
+            <remarks>
+            <para>
+            <paramref name="csvReader"/> must have a <see cref="T:Kent.Boogaart.KBCsv.HeaderRecord"/>, which is used to populate the column names of the <see cref="T:System.Data.DataTable"/>.
+            </para>
+            </remarks>
+            <param name="this">
+            The <see cref="T:System.Data.DataSet"/>.
+            </param>
+            <param name="csvReader">
+            The <see cref="T:Kent.Boogaart.KBCsv.CsvReader"/>.
+            </param>
+            <param name="tableName">
+            The name of the table to create and add to <paramref name="this"/>
+            </param>
+            <param name="maximumRecords">
+            The maximum number of records to read and add to the <see cref="T:System.Data.DataTable"/>.
+            </param>
+            <returns>
+            The number of rows added to the <see cref="T:System.Data.DataTable"/> (and therefore the number of data records read from <paramref name="csvReader"/>).
+            </returns>
+        </member>
+        <member name="M:Kent.Boogaart.KBCsv.Extensions.Data.DataExtensions.Fill(System.Data.DataTable,Kent.Boogaart.KBCsv.CsvReader)">
+            <summary>
+            Populates <paramref name="this"/> with data read from <paramref name="csvReader"/>.
+            </summary>
+            <remarks>
+            <para>
+            All records from <paramref name="csvReader"/> will be read and added to the table.
+            </para>
+            <para>
+            If <paramref name="this"/> has columns defined, those columns will be used when populating the data. If no columns have been defined, <paramref name="csvReader"/> must have a
+            <see cref="T:Kent.Boogaart.KBCsv.HeaderRecord"/>, which is then used to define the columns for <paramref name="this"/>. If any data record has more values than can fit into the columns defined on
+            <paramref name="this"/>, an exception is thrown.
+            </para>
+            </remarks>
+            <param name="this">
+            The <see cref="T:System.Data.DataTable"/>.
+            </param>
+            <param name="csvReader">
+            The <see cref="T:Kent.Boogaart.KBCsv.CsvReader"/>.
+            </param>
+            <returns>
+            The number of rows added to <paramref name="this"/> (and therefore the number of data records read from <paramref name="csvReader"/>).
+            </returns>
+        </member>
+        <member name="M:Kent.Boogaart.KBCsv.Extensions.Data.DataExtensions.Fill(System.Data.DataTable,Kent.Boogaart.KBCsv.CsvReader,System.Nullable{System.Int32})">
+            <summary>
+            Populates <paramref name="this"/> with data read from <paramref name="csvReader"/>.
+            </summary>
+            <remarks>
+            <para>
+            If <paramref name="this"/> has columns defined, those columns will be used when populating the data. If no columns have been defined, <paramref name="csvReader"/> must have a
+            <see cref="T:Kent.Boogaart.KBCsv.HeaderRecord"/>, which is then used to define the columns for <paramref name="this"/>. If any data record has more values than can fit into the columns defined on
+            <paramref name="this"/>, an exception is thrown.
+            </para>
+            </remarks>
+            <param name="this">
+            The <see cref="T:System.Data.DataTable"/>.
+            </param>
+            <param name="csvReader">
+            The <see cref="T:Kent.Boogaart.KBCsv.CsvReader"/>.
+            </param>
+            <param name="maximumRecords">
+            The maximum number of records to read and add to <paramref name="this"/>.
+            </param>
+            <returns>
+            The number of rows added to <paramref name="this"/> (and therefore the number of data records read from <paramref name="csvReader"/>).
+            </returns>
+        </member>
+        <member name="M:Kent.Boogaart.KBCsv.Extensions.Data.DataExtensions.WriteCsv(System.Data.DataTable,Kent.Boogaart.KBCsv.CsvWriter)">
+            <summary>
+            Writes all rows in <paramref name="this"/> to <paramref name="csvWriter"/>.
+            </summary>
+            <remarks>
+            <para>
+            All rows in <paramref name="this"/> will be written to <paramref name="csvWriter"/>. A header record will also be written, which will be comprised of the column names defined for
+            <paramref name="this"/>.
+            </para>
+            </remarks>
+            <param name="this">
+            The <see cref="T:System.Data.DataTable"/>.
+            </param>
+            <param name="csvWriter">
+            The <see cref="T:Kent.Boogaart.KBCsv.CsvWriter"/>.
+            </param>
+            <returns>
+            The actual number of rows from <paramref name="this"/> written to <paramref name="csvWriter"/>.
+            </returns>
+        </member>
+        <member name="M:Kent.Boogaart.KBCsv.Extensions.Data.DataExtensions.WriteCsv(System.Data.DataTable,Kent.Boogaart.KBCsv.CsvWriter,System.Boolean)">
+            <summary>
+            Writes all rows in <paramref name="this"/> to <paramref name="csvWriter"/>.
+            </summary>
+            <remarks>
+            <para>
+            All rows in <paramref name="this"/> will be written to <paramref name="csvWriter"/>.
+            </para>
+            </remarks>
+            <param name="this">
+            The <see cref="T:System.Data.DataTable"/>.
+            </param>
+            <param name="csvWriter">
+            The <see cref="T:Kent.Boogaart.KBCsv.CsvWriter"/>.
+            </param>
+            <param name="writeHeaderRecord">
+            If <see langword="true"/>, a header record will also be written, which will be comprised of the column names defined for <paramref name="this"/>.
+            </param>
+            <returns>
+            The actual number of rows from <paramref name="this"/> written to <paramref name="csvWriter"/>.
+            </returns>
+        </member>
+        <member name="M:Kent.Boogaart.KBCsv.Extensions.Data.DataExtensions.WriteCsv(System.Data.DataTable,Kent.Boogaart.KBCsv.CsvWriter,System.Boolean,System.Nullable{System.Int32})">
+            <summary>
+            Writes all rows in <paramref name="this"/> to <paramref name="csvWriter"/>.
+            </summary>
+            <remarks>
+            </remarks>
+            <param name="this">
+            The <see cref="T:System.Data.DataTable"/>.
+            </param>
+            <param name="csvWriter">
+            The <see cref="T:Kent.Boogaart.KBCsv.CsvWriter"/>.
+            </param>
+            <param name="writeHeaderRecord">
+            If <see langword="true"/>, a header record will also be written, which will be comprised of the column names defined for <paramref name="this"/>.
+            </param>
+            <param name="maximumRows">
+            The maximum number of rows from <paramref name="this"/> that should be written to <paramref name="csvWriter"/>.
+            </param>
+            <returns>
+            The actual number of rows from <paramref name="this"/> written to <paramref name="csvWriter"/>.
+            </returns>
+        </member>
+        <member name="M:Kent.Boogaart.KBCsv.Extensions.Data.DataExtensions.WriteCsv(System.Data.DataTable,Kent.Boogaart.KBCsv.CsvWriter,System.Boolean,System.Nullable{System.Int32},System.Func{System.Object,System.String})">
+            <summary>
+            Writes all rows in <paramref name="this"/> to <paramref name="csvWriter"/>.
+            </summary>
+            <remarks>
+            </remarks>
+            <param name="this">
+            The <see cref="T:System.Data.DataTable"/>.
+            </param>
+            <param name="csvWriter">
+            The <see cref="T:Kent.Boogaart.KBCsv.CsvWriter"/>.
+            </param>
+            <param name="writeHeaderRecord">
+            If <see langword="true"/>, a header record will also be written, which will be comprised of the column names defined for <paramref name="this"/>.
+            </param>
+            <param name="maximumRows">
+            The maximum number of rows from <paramref name="this"/> that should be written to <paramref name="csvWriter"/>.
+            </param>
+            <param name="objectToStringConverter">
+            Provides a means of converting values in the <see cref="T:System.Data.DataRow"/>s to <see cref="T:System.String"/>s.
+            </param>
+            <returns>
+            The actual number of rows from <paramref name="this"/> written to <paramref name="csvWriter"/>.
+            </returns>
+        </member>
+        <member name="M:Kent.Boogaart.KBCsv.Extensions.Data.DataExtensions.FillAsync(System.Data.DataSet,Kent.Boogaart.KBCsv.CsvReader)">
+            <summary>
+            Creates a table in <paramref name="this"/> and populates it with data read asynchronously from <paramref name="csvReader"/>.
+            </summary>
+            <remarks>
+            <para>
+            The name of the table created and added to <paramref name="this"/> is <see cref="F:Kent.Boogaart.KBCsv.Extensions.Data.DataExtensions.DefaultTableName"/>. All records from <paramref name="csvReader"/> will be read and added to the table.
+            </para>
+            <para>
+            <paramref name="csvReader"/> must have a <see cref="T:Kent.Boogaart.KBCsv.HeaderRecord"/>, which is used to populate the column names of the <see cref="T:System.Data.DataTable"/>.
+            </para>
+            </remarks>
+            <param name="this">
+            The <see cref="T:System.Data.DataSet"/>.
+            </param>
+            <param name="csvReader">
+            The <see cref="T:Kent.Boogaart.KBCsv.CsvReader"/>.
+            </param>
+            <returns>
+            The number of rows added to the <see cref="T:System.Data.DataTable"/> (and therefore the number of data records read from <paramref name="csvReader"/>).
+            </returns>
+        </member>
+        <member name="M:Kent.Boogaart.KBCsv.Extensions.Data.DataExtensions.FillAsync(System.Data.DataSet,Kent.Boogaart.KBCsv.CsvReader,System.String)">
+            <summary>
+            Creates a table in <paramref name="this"/> and populates it with data read asynchronously from <paramref name="csvReader"/>.
+            </summary>
+            <remarks>
+            <para>
+            All records from <paramref name="csvReader"/> will be read and added to the table.
+            </para>
+            <para>
+            <paramref name="csvReader"/> must have a <see cref="T:Kent.Boogaart.KBCsv.HeaderRecord"/>, which is used to populate the column names of the <see cref="T:System.Data.DataTable"/>.
+            </para>
+            </remarks>
+            <param name="this">
+            The <see cref="T:System.Data.DataSet"/>.
+            </param>
+            <param name="csvReader">
+            The <see cref="T:Kent.Boogaart.KBCsv.CsvReader"/>.
+            </param>
+            <param name="tableName">
+            The name of the table to create and add to <paramref name="this"/>
+            </param>
+            <returns>
+            The number of rows added to the <see cref="T:System.Data.DataTable"/> (and therefore the number of data records read from <paramref name="csvReader"/>).
+            </returns>
+        </member>
+        <member name="M:Kent.Boogaart.KBCsv.Extensions.Data.DataExtensions.FillAsync(System.Data.DataSet,Kent.Boogaart.KBCsv.CsvReader,System.String,System.Nullable{System.Int32})">
+            <summary>
+            Creates a table in <paramref name="this"/> and populates it with data read asynchronously from <paramref name="csvReader"/>.
+            </summary>
+            <remarks>
+            <para>
+            <paramref name="csvReader"/> must have a <see cref="T:Kent.Boogaart.KBCsv.HeaderRecord"/>, which is used to populate the column names of the <see cref="T:System.Data.DataTable"/>.
+            </para>
+            </remarks>
+            <param name="this">
+            The <see cref="T:System.Data.DataSet"/>.
+            </param>
+            <param name="csvReader">
+            The <see cref="T:Kent.Boogaart.KBCsv.CsvReader"/>.
+            </param>
+            <param name="tableName">
+            The name of the table to create and add to <paramref name="this"/>
+            </param>
+            <param name="maximumRecords">
+            The maximum number of records to read and add to the <see cref="T:System.Data.DataTable"/>.
+            </param>
+            <returns>
+            The number of rows added to the <see cref="T:System.Data.DataTable"/> (and therefore the number of data records read from <paramref name="csvReader"/>).
+            </returns>
+        </member>
+        <member name="M:Kent.Boogaart.KBCsv.Extensions.Data.DataExtensions.FillAsync(System.Data.DataTable,Kent.Boogaart.KBCsv.CsvReader)">
+            <summary>
+            Populates <paramref name="this"/> with data read asynchronously from <paramref name="csvReader"/>.
+            </summary>
+            <remarks>
+            <para>
+            All records from <paramref name="csvReader"/> will be read and added to the table.
+            </para>
+            <para>
+            If <paramref name="this"/> has columns defined, those columns will be used when populating the data. If no columns have been defined, <paramref name="csvReader"/> must have a
+            <see cref="T:Kent.Boogaart.KBCsv.HeaderRecord"/>, which is then used to define the columns for <paramref name="this"/>. If any data record has more values than can fit into the columns defined on
+            <paramref name="this"/>, an exception is thrown.
+            </para>
+            </remarks>
+            <param name="this">
+            The <see cref="T:System.Data.DataTable"/>.
+            </param>
+            <param name="csvReader">
+            The <see cref="T:Kent.Boogaart.KBCsv.CsvReader"/>.
+            </param>
+            <returns>
+            The number of rows added to <paramref name="this"/> (and therefore the number of data records read from <paramref name="csvReader"/>).
+            </returns>
+        </member>
+        <member name="M:Kent.Boogaart.KBCsv.Extensions.Data.DataExtensions.FillAsync(System.Data.DataTable,Kent.Boogaart.KBCsv.CsvReader,System.Nullable{System.Int32})">
+            <summary>
+            Populates <paramref name="this"/> with data read asynchronously from <paramref name="csvReader"/>.
+            </summary>
+            <remarks>
+            <para>
+            If <paramref name="this"/> has columns defined, those columns will be used when populating the data. If no columns have been defined, <paramref name="csvReader"/> must have a
+            <see cref="T:Kent.Boogaart.KBCsv.HeaderRecord"/>, which is then used to define the columns for <paramref name="this"/>. If any data record has more values than can fit into the columns defined on
+            <paramref name="this"/>, an exception is thrown.
+            </para>
+            </remarks>
+            <param name="this">
+            The <see cref="T:System.Data.DataTable"/>.
+            </param>
+            <param name="csvReader">
+            The <see cref="T:Kent.Boogaart.KBCsv.CsvReader"/>.
+            </param>
+            <param name="maximumRecords">
+            The maximum number of records to read and add to <paramref name="this"/>.
+            </param>
+            <returns>
+            The number of rows added to <paramref name="this"/> (and therefore the number of data records read from <paramref name="csvReader"/>).
+            </returns>
+        </member>
+        <member name="M:Kent.Boogaart.KBCsv.Extensions.Data.DataExtensions.WriteCsvAsync(System.Data.DataTable,Kent.Boogaart.KBCsv.CsvWriter)">
+            <summary>
+            Asynchronously writes all rows in <paramref name="this"/> to <paramref name="csvWriter"/>.
+            </summary>
+            <remarks>
+            <para>
+            All rows in <paramref name="this"/> will be written to <paramref name="csvWriter"/>. A header record will also be written, which will be comprised of the column names defined for
+            <paramref name="this"/>.
+            </para>
+            </remarks>
+            <param name="this">
+            The <see cref="T:System.Data.DataTable"/>.
+            </param>
+            <param name="csvWriter">
+            The <see cref="T:Kent.Boogaart.KBCsv.CsvWriter"/>.
+            </param>
+            <returns>
+            The actual number of rows from <paramref name="this"/> written to <paramref name="csvWriter"/>.
+            </returns>
+        </member>
+        <member name="M:Kent.Boogaart.KBCsv.Extensions.Data.DataExtensions.WriteCsvAsync(System.Data.DataTable,Kent.Boogaart.KBCsv.CsvWriter,System.Boolean)">
+            <summary>
+            Asynchronously writes all rows in <paramref name="this"/> to <paramref name="csvWriter"/>.
+            </summary>
+            <remarks>
+            <para>
+            All rows in <paramref name="this"/> will be written to <paramref name="csvWriter"/>.
+            </para>
+            </remarks>
+            <param name="this">
+            The <see cref="T:System.Data.DataTable"/>.
+            </param>
+            <param name="csvWriter">
+            The <see cref="T:Kent.Boogaart.KBCsv.CsvWriter"/>.
+            </param>
+            <param name="writeHeaderRecord">
+            If <see langword="true"/>, a header record will also be written, which will be comprised of the column names defined for <paramref name="this"/>.
+            </param>
+            <returns>
+            The actual number of rows from <paramref name="this"/> written to <paramref name="csvWriter"/>.
+            </returns>
+        </member>
+        <member name="M:Kent.Boogaart.KBCsv.Extensions.Data.DataExtensions.WriteCsvAsync(System.Data.DataTable,Kent.Boogaart.KBCsv.CsvWriter,System.Boolean,System.Nullable{System.Int32})">
+            <summary>
+            Asynchronously writes all rows in <paramref name="this"/> to <paramref name="csvWriter"/>.
+            </summary>
+            <remarks>
+            </remarks>
+            <param name="this">
+            The <see cref="T:System.Data.DataTable"/>.
+            </param>
+            <param name="csvWriter">
+            The <see cref="T:Kent.Boogaart.KBCsv.CsvWriter"/>.
+            </param>
+            <param name="writeHeaderRecord">
+            If <see langword="true"/>, a header record will also be written, which will be comprised of the column names defined for <paramref name="this"/>.
+            </param>
+            <param name="maximumRows">
+            The maximum number of rows from <paramref name="this"/> that should be written to <paramref name="csvWriter"/>.
+            </param>
+            <returns>
+            The actual number of rows from <paramref name="this"/> written to <paramref name="csvWriter"/>.
+            </returns>
+        </member>
+        <member name="M:Kent.Boogaart.KBCsv.Extensions.Data.DataExtensions.WriteCsvAsync(System.Data.DataTable,Kent.Boogaart.KBCsv.CsvWriter,System.Boolean,System.Nullable{System.Int32},System.Func{System.Object,System.String})">
+            <summary>
+            Asynchronously writes all rows in <paramref name="this"/> to <paramref name="csvWriter"/>.
+            </summary>
+            <remarks>
+            </remarks>
+            <param name="this">
+            The <see cref="T:System.Data.DataTable"/>.
+            </param>
+            <param name="csvWriter">
+            The <see cref="T:Kent.Boogaart.KBCsv.CsvWriter"/>.
+            </param>
+            <param name="writeHeaderRecord">
+            If <see langword="true"/>, a header record will also be written, which will be comprised of the column names defined for <paramref name="this"/>.
+            </param>
+            <param name="maximumRows">
+            The maximum number of rows from <paramref name="this"/> that should be written to <paramref name="csvWriter"/>.
+            </param>
+            <param name="objectToStringConverter">
+            Provides a means of converting values in the <see cref="T:System.Data.DataRow"/>s to <see cref="T:System.String"/>s.
+            </param>
+            <returns>
+            The actual number of rows from <paramref name="this"/> written to <paramref name="csvWriter"/>.
+            </returns>
+        </member>
+    </members>
+</doc>

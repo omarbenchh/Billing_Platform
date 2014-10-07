@@ -1,0 +1,15 @@
+C:\Users\Omar\Documents\Visual Studio 2012\Projects\BILLING_PLATFORM\BILLING_PLATFORM\obj\Debug\BILLING_PLATFORM.csproj.ResolveComReference.cache
+C:\Users\Omar\Documents\Visual Studio 2012\Projects\BILLING_PLATFORM\BILLING_PLATFORM\obj\Debug\BILLING_PLATFORM.exe.manifest
+C:\Users\Omar\Documents\Visual Studio 2012\Projects\BILLING_PLATFORM\BILLING_PLATFORM\obj\Debug\BILLING_PLATFORM.exe
+C:\Users\Omar\Documents\Visual Studio 2012\Projects\BILLING_PLATFORM\BILLING_PLATFORM\obj\Debug\BILLING_PLATFORM.pdb
+C:\Users\Omar\Documents\Visual Studio 2012\Projects\BILLING_PLATFORM\BILLING_PLATFORM\bin\Debug\BILLING_PLATFORM.exe.config
+C:\Users\Omar\Documents\Visual Studio 2012\Projects\BILLING_PLATFORM\BILLING_PLATFORM\bin\Debug\BILLING_PLATFORM.exe.manifest
+C:\Users\Omar\Documents\Visual Studio 2012\Projects\BILLING_PLATFORM\BILLING_PLATFORM\bin\Debug\BILLING_PLATFORM.application
+C:\Users\Omar\Documents\Visual Studio 2012\Projects\BILLING_PLATFORM\BILLING_PLATFORM\bin\Debug\BILLING_PLATFORM.exe
+C:\Users\Omar\Documents\Visual Studio 2012\Projects\BILLING_PLATFORM\BILLING_PLATFORM\bin\Debug\BILLING_PLATFORM.pdb
+C:\Users\Omar\Documents\Visual Studio 2012\Projects\BILLING_PLATFORM\BILLING_PLATFORM\bin\Debug\itextsharp.dll
+C:\Users\Omar\Documents\Visual Studio 2012\Projects\BILLING_PLATFORM\BILLING_PLATFORM\bin\Debug\itextsharp.pdfa.dll
+C:\Users\Omar\Documents\Visual Studio 2012\Projects\BILLING_PLATFORM\BILLING_PLATFORM\bin\Debug\itextsharp.xtra.dll
+C:\Users\Omar\Documents\Visual Studio 2012\Projects\BILLING_PLATFORM\BILLING_PLATFORM\bin\Debug\itextsharp.xml
+C:\Users\Omar\Documents\Visual Studio 2012\Projects\BILLING_PLATFORM\BILLING_PLATFORM\obj\Debug\BILLING_PLATFORM.application
+C:\Users\Omar\Documents\Visual Studio 2012\Projects\BILLING_PLATFORM\BILLING_PLATFORM\obj\Debug\BILLING_PLATFORM.csprojResolveAssemblyReference.cache
